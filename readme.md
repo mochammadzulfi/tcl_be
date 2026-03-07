@@ -16,8 +16,6 @@ Backend API untuk aplikasi **TCL Inventory Management System** yang menangani ma
 
 # Cara Menjalankan Aplikasi
 
-## 1. Clone Repository
-
 ```bash
 git clone https://github.com/mochammadzulfi/tcl_be.git
 cd tcl_be
