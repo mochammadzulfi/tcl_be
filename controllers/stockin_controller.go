@@ -14,6 +14,17 @@ type StockInRequest struct {
 	Qty       int  `json:"qty"`
 }
 
+func GetStockIn(c *gin.Context) {
+
+	var stockIns []models.StockIn
+	config.DB.
+		Preload("Items").
+		Preload("Items.Product").
+		Find(&stockIns)
+
+	c.JSON(http.StatusOK, stockIns)
+}
+
 func CreateStockIn(c *gin.Context) {
 
 	var req StockInRequest

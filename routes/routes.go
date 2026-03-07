@@ -16,11 +16,13 @@ func SetupRoutes(r *gin.Engine) {
 	r.GET("/inventory", controllers.GetInventory)
 
 	//stock in
+	r.GET("/stock-in", controllers.GetStockIn)
 	r.POST("/stock-in", controllers.CreateStockIn)
 	r.PATCH("/stock-in/:id/start", controllers.StartStockIn)
 	r.PATCH("/stock-in/:id/complete", controllers.CompleteStockIn)
 
 	//stock out
+	r.GET("/stock-out", controllers.GetStockOut)
 	r.POST("/stock-out", controllers.CreateStockOut)
 	r.PATCH("/stock-out/:id/process", controllers.ProcessStockOut)
 	r.PATCH("/stock-out/:id/complete", controllers.CompleteStockOut)
